@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="location-dropdown">
+            <select id="location-dropdown">
+                <option value="amsterdam">Amsterdam</option>
+                <option value="moscow">Moscow</option>
+                <option value="oslo">Oslo</option>
+                <option value="stokolm">Stokolm</option>
+                <option value="warsaw">Warsaw</option>
+                <option value="washington">Washington</option>
+                <option value="yerevan">Yerevan</option>
+            </select>
+        </div>
+
+
+        <div class="days-wrapper" id="days-wrapper"></div>
+        <script type="text/template" id="day-template">
+            <div class="single-day {{activeClass}}">
+                <strong>{{date}}</strong>
+                <span class="month">{{month}}</span>
+                <span class="weekday">{{day}}</span>
+            </div>
+        </script>
+
+        
+        <div id="weather-details"></div>
+        <script type="text/template" id="details-template">
+            <div class="weather-details">
+                <div class="temperature">
+                    <div class="degree">
+                        <strong>{{temperature}}</strong>
+                        <span class="weather-description">
+                            <img src="https://www.weatherbit.io/static/img/icons/{{icon}}.png" alt=""> 
+                            {{description}}
+                        </span>
+                    </div>
+                    <sup>o</sup>
+                </div>
+            </div>
+        </script>
+        
+    </div>
+
+
+    <script src="./js/eventEmitter.js"></script>
+    <script src="./js/calendar.js"></script>
+    <script src="./js/details.js"></script>
+    <script src="./js/location.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.container {
+    max-width: 980px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* calendar styles */
+.days-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.single-day {
+    cursor: pointer;
+    text-align: center;
+    background: #ececec;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    box-shadow: 4px 4px 15px 0px rgba(0,0,0,.15);
+}
+.single-day.active {
+    background-color: #ffa726;
+    color: #fff3ef;
+}
+.single-day strong {
+    font-size: 3em;
+    display: block;
+    line-height: 1; 
+}
+.single-day .month {
+    text-transform: uppercase;
+    font-size: .7em;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+.single-day .weekday {
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 500;
+}
+
+
+
+/* location dropdown styles */
+.location-dropdown {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.location-dropdown select {
+    width: 420px;
+    padding: 14px 20px;
+    border: solid 1px #cacaca;
+}
+
+
+/* weather details */
+.weather-details {
+    margin-top: 60px;
+}
+.temperature {
+    font-size: 10em;
+    margin: 0;
+    display: flex;
+    line-height: 1;
+    text-align: left;
+    justify-content: center;
+}
+.temperature sup {
+    font-size: 0.4em;
+    vertical-align: text-top;
+    font-weight: 600;
+}
+.temperature-unit {
+    font-weight: 300;
+}
+.weather-description {
+    display: block;
+    font-size: .1em;
+}
+.weather-description img {
+    width: 32px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
