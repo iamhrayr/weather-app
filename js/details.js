@@ -10,14 +10,14 @@ var details = (function(){
     events.on('newDataReceived', dataReceivedHandler);
     events.on('activeDayChanged', dayChangeHandler);
 
-
+    
     function dataReceivedHandler(forecast) {
         activeDayData = forecast.data[0];
         renderDetails();
     }
 
     function dayChangeHandler(data) {
-        activeDayData = data.info;
+        activeDayData = data;
         renderDetails();
     }
 

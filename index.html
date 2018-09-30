@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         
+        <!-- dropdown for changing location -->
         <div class="location-dropdown">
             <select id="location-dropdown">
                 <option value="amsterdam">Amsterdam</option>
@@ -22,6 +23,7 @@
         </div>
 
 
+        <!-- upcoming 7 days -->
         <div class="days-wrapper" id="days-wrapper"></div>
         <script type="text/template" id="day-template">
             <div class="single-day {{activeClass}}">
@@ -32,6 +34,7 @@
         </script>
 
         
+        <!-- weather details of the current day -->
         <div id="weather-details"></div>
         <script type="text/template" id="details-template">
             <div class="weather-details">
@@ -47,7 +50,6 @@
                 </div>
             </div>
         </script>
-        
     </div>
 
 
